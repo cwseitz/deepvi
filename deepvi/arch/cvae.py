@@ -5,9 +5,7 @@ import torch.nn as nn
 import torch.nn.init as init
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-import cv2
 from torchvision import datasets, transforms
-from scipy.stats import kde
 
 class ConvVAE(nn.Module):
     def __init__(self, latent_dim, hidden_dim=1024):

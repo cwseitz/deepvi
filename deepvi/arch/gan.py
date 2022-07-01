@@ -1,7 +1,6 @@
 import torch, math, copy
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from torchvision import datasets, transforms
 import torch.nn as nn
 import torch.nn.init as init

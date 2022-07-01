@@ -1,5 +1,4 @@
 from distutils.core import setup, Extension
-import numpy
 import os
 
 def main():
