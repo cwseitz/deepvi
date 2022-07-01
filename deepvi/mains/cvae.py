@@ -6,6 +6,7 @@ import torch.nn.init as init
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import cv2
+from deevi.arch import ConvVAE
 from torchvision import datasets, transforms
 from scipy.stats import kde
 
@@ -101,6 +102,9 @@ def show(x):
     img = x.data.cpu().permute(1, 2, 0).numpy() * 255
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     cv2.imshow(img)
+
+vae = ConvVAE(100).cuda()
+opt = torch.optim.Adam(vae.parameters(), lr=5e-4)
 
 #training loop
 beta = 2
